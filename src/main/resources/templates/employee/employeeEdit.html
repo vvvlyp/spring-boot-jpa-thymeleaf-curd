@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>employee</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+</head>
+<body class="container">
+<br/>
+<h1>修改员工</h1>
+<br/><br/>
+<div class="with:80%">
+    <form class="form-horizontal"   th:action="@{/edit1}" th:object="${employee}"  method="post">
+        <input type="hidden" name="emp_id" th:value="*{emp_id}" />
+        <!--<div class="form-group">-->
+            <!--<label for="emp_id" class="col-sm-2 control-label">员工号</label>-->
+            <!--<div class="col-sm-10">-->
+                <!--<input type="text" class="form-control" name="emp_id"  id="emp_id" th:value="*{emp_id}" placeholder=" "/>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="form-group">
+            <label for="emp_account" class="col-sm-2 control-label" >账户</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="emp_account" id="emp_account"  th:value="*{emp_account}" placeholder=" "/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="emp_password" class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="emp_password"  id="emp_password" th:value="*{emp_password}" placeholder="age"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="emp_name" class="col-sm-2 control-label">员工姓名</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="emp_name"  id="emp_name" th:value="*{emp_name}" placeholder=""/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="emp_className" class="col-sm-2 control-label" >部门号</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="emp_clasName" id="emp_className"  th:value="*{emp_className}" placeholder=""/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="emp_tel" class="col-sm-2 control-label">电话</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="emp_tel"  id="emp_tel" th:value="*{emp_tel}" placeholder=""/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="emp_bedroom" class="col-sm-2 control-label">宿舍号</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="emp_bedroom"  id="emp_bedroom" th:value="*{emp_bedroom}" placeholder=""/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="dept_name" class="col-sm-2 control-label" >部门</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="dept_name" id="dept_name"  th:value="*{dept_name}" placeholder=""/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mgr_id" class="col-sm-2 control-label">管理人员</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="mgr_id"  id="mgr_id" th:value="*{mgr_id}" placeholder=""/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="emp_type" class="col-sm-2 control-label">角色</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="emp_type"  id="emp_type" th:value="*{emp_type}" placeholder=""/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" value="Submit" class="btn btn-info" />
+                &nbsp; &nbsp; &nbsp;
+                <a href="/toAdd1" th:href="@{/list1}" class="btn btn-info">Back</a>
+            </div>
+
+        </div>
+    </form>
+</div>
+</body>
+</html>
